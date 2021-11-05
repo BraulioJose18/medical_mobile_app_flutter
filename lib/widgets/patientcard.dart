@@ -49,9 +49,9 @@ class PatientCard extends StatelessWidget {
                   padding: const EdgeInsets.all(10),
                   child: Row(
                     children: [
-                      IconFont(color: patient!.color, iconName: patient!.icon),
+                      //IconFont(color: patient!.color, iconName: patient!.icon),
                       const SizedBox(width: 10),
-                      Text(patient!.full_name,
+                      Text(patient!.fullName,
                           style: const TextStyle(
                               color: Colors.white, fontSize: 25))
                     ],

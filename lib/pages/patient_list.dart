@@ -8,7 +8,7 @@ import 'package:medical_mobile_app_flutter/widgets/iconfont.dart';
 import 'package:medical_mobile_app_flutter/widgets/patientcard.dart';
 
 class PatientListPage extends StatelessWidget{
-  List<Patient> patients = Utils.getMockedPatients();
+  List<Patient> patients = Null as List<Patient>;//Utils.getMockedPatients();
   @override
   Widget build(BuildContext context) {
     return Scaffold(

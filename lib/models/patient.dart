@@ -1,25 +1,31 @@
-import 'dart:ui';
-
 class Patient {
-  final String full_name;
-  final String birthday_date;
+  final int id;
+  final String fullName;
+  final DateTime birthDate;
+  final String height;
   final String address;
-  final String latitude;
-  final String longitude;
-  final Color color;
-  final String img;
-  final String icon;
-  final List<Patient> patients;
+  final double locationLatitude;
+  final double locationLongitude;
 
-  Patient({
-    required this.full_name,
-    required this.birthday_date,
-    required this.address,
-    required this.latitude,
-    required this.longitude,
-    required this.color,
-    required this.img,
-    required this.icon,
-    required this.patients,
-  });
+  Patient(
+      {required this.id,
+      required this.fullName,
+      required this.birthDate,
+      required this.height,
+      required this.address,
+      required this.locationLatitude,
+      required this.locationLongitude});
+
+  factory Patient.fromJson(Map<String, dynamic> json) {
+    // birth date have to be in date.toIso8601String();
+    return Patient(
+      id: json['id'],
+      fullName: json['full_name'],
+      birthDate: DateTime.parse(json['birth_date']),
+      height: json['height'],
+      address: json['address'],
+      locationLatitude: json['location_latitude'],
+      locationLongitude: json['location_longitude'],
+    );
+  }
 }

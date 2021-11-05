@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:medical_mobile_app_flutter/models/patient.dart';
 
-class Utils {
+/*class Utils {
   static List<Patient> getMockedPatients() {
     return [
       Patient(
@@ -46,4 +46,4 @@ class Utils {
           patients: [])
     ];
   }
-}
+}*/
