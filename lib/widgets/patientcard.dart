@@ -6,7 +6,7 @@ class PatientCard extends StatelessWidget {
   Patient? patient;
   Function? onCardClick;
 
-  PatientCard({ this.patient, this.onCardClick });
+  PatientCard({this.patient, this.onCardClick});
 
   @override
   Widget build(BuildContext context) {
@@ -22,9 +22,7 @@ class PatientCard extends StatelessWidget {
               Positioned.fill(
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(20),
-                  child: Image.asset(
-                      'assets/imgs/cat1.png',
-                      fit: BoxFit.cover),
+                  child: Image.asset('assets/imgs/cat1.png', fit: BoxFit.cover),
                 ),
               ),
               Positioned(
@@ -51,12 +49,11 @@ class PatientCard extends StatelessWidget {
                   padding: const EdgeInsets.all(10),
                   child: Row(
                     children: [
-                      IconFont(
-                          color: patient!.color,
-                          iconName: patient!.icon),
+                      IconFont(color: patient!.color, iconName: patient!.icon),
                       const SizedBox(width: 10),
-                      Text(patient!.name!,
-                          style: const TextStyle(color: Colors.white, fontSize: 25))
+                      Text(patient!.full_name,
+                          style: const TextStyle(
+                              color: Colors.white, fontSize: 25))
                     ],
                   ),
                 ),
