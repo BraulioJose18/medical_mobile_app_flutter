@@ -188,10 +188,10 @@ class SelectedPatientPage extends StatelessWidget {
                                     ),
                                     Row(
                                       mainAxisAlignment:
-                                      MainAxisAlignment.end,
+                                      MainAxisAlignment.center,
                                       children: [
                                         const Padding(
-                                          padding: EdgeInsets.only(top: 10, right: 10),
+                                          padding: EdgeInsets.only(top: 10, right: 280),
                                         ),
                                         Column(
                                           children: [
