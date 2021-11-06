@@ -1,14 +1,15 @@
-import 'package:flutter/cupertino.dart';
+/*import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:medical_mobile_app_flutter/helpers/iconfonthelper.dart';
-import 'package:medical_mobile_app_flutter/helpers/utils.dart';
 import 'package:medical_mobile_app_flutter/models/patient.dart';
 import 'package:medical_mobile_app_flutter/pages/selected_patient.dart';
 import 'package:medical_mobile_app_flutter/widgets/iconfont.dart';
 import 'package:medical_mobile_app_flutter/widgets/patientcard.dart';
 
-class PatientListPage extends StatelessWidget{
-  List<Patient> patients = Null as List<Patient>;//Utils.getMockedPatients();
+class PatientListPage extends State<Main>{
+  List<Patient> patients = Null as List<Patient>;
+  //Utils.getMockedPatients();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -58,4 +59,4 @@ class PatientListPage extends StatelessWidget{
     );
   }
   
-}
+}*/
