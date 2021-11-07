@@ -13,9 +13,22 @@ class CustomListTile extends StatelessWidget {
         Navigator.pushNamed(context, 'detail_patient',arguments: Arguments(patient: patient));
       },
       trailing: Icon(Icons.edit),
-      leading: Icon(Icons.person),
+      leading: CircleAvatar(
+        child: Text(patient.fullName[0].toUpperCase()),
+      ),
       title: Text(patient.fullName),
-      subtitle: Text(patient.address),
+      subtitle: Row(
+        children: <Widget>[
+          Column(
+            children: <Widget> [
+              Text('Dirección: '+ patient.address),
+              Text('Coordenadas: ' + patient.locationLongitude.toString() +","+  patient.locationLatitude.toString()),
+              Text('Altura: ' + patient.height.toString()),
+            ],
+          )
+        ],
+      )
+
     );
   }
 }

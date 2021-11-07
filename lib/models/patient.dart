@@ -1,13 +1,13 @@
 import 'dart:convert';
 
 class Patient {
-  final int id;
-  final String fullName;
-  final DateTime birthDate;
-  final double height;
-  final String address;
-  final double locationLatitude;
-  final double locationLongitude;
+  int id;
+  String fullName;
+  DateTime birthDate;
+  double height;
+  String address;
+  double locationLatitude;
+  double locationLongitude;
 
   Patient(
       {this.id,

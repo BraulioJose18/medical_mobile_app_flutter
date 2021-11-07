@@ -10,7 +10,6 @@ class DetailPatient extends StatelessWidget {
     final Arguments arguments = ModalRoute.of(context).settings.arguments as Arguments;
     return Scaffold(
       appBar: AppBar(
-        title: Text(arguments.patient.fullName),
         centerTitle: true,
       ),
       body: Center(

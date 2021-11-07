@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:medical_mobile_app_flutter/pages/form_add_patient.dart';
 
 class CustomButton extends StatefulWidget {
 
@@ -14,7 +13,7 @@ class _CustomButtonState extends State<CustomButton> {
     return InkWell(
       onTap: (){
         print('boton presionado');
-        Navigator.pushNamed(context, 'detail_patient');
+        Navigator.pushNamed(context, 'form_add_patient');
       },
       child: Container(
         height: 60.0,
