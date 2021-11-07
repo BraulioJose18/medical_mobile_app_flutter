@@ -10,13 +10,13 @@ class Patient {
   final double locationLongitude;
 
   Patient(
-      {required this.id,
-        required this.fullName,
-        required this.birthDate,
-        required this.height,
-        required this.address,
-        required this.locationLatitude,
-        required this.locationLongitude});
+      {this.id,
+        this.fullName,
+        this.birthDate,
+        this.height,
+        this.address,
+        this.locationLatitude,
+        this.locationLongitude});
 
   factory Patient.fromJson(Map<String, dynamic> json) {
     // birth date have to be in date.toIso8601String();
@@ -43,3 +43,11 @@ class Patient {
     });
   }
 }
+Patient patient1 = Patient(
+    id: 1,
+    fullName: 'Pedrito',
+    birthDate: DateTime.now(),
+    height: 170,
+    address: 'Calle Siempre Viva 515',
+    locationLatitude: -7800,
+    locationLongitude: 5000);

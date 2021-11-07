@@ -1,52 +1,81 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:medical_mobile_app_flutter/models/patient.dart';
-import 'package:medical_mobile_app_flutter/widgets/custom_button.dart';
-import 'package:medical_mobile_app_flutter/widgets/custom_list_tile.dart';
+import 'package:medical_mobile_app_flutter/pages/list_patients.dart';
 
-Patient patient1 = Patient(
-    id: 1,
-    fullName: 'Pedrito',
-    birthDate: DateTime.now(),
-    height: 170,
-    address: 'Calle Siempre Viva 515',
-    locationLatitude: -7800,
-    locationLongitude: 5000);
-
-List<Patient> patients = [
-  patient1, patient1, patient1, patient1, patient1, patient1, patient1, patient1, patient1, patient1, patient1, patient1, patient1, patient1, patient1, patient1
+List<Widget> pages = [
+  ListPatientsPage(),
+  Container(color: Colors.blue),
 ];
+class HomePagePatients extends StatefulWidget {
 
-class HomePagePatients extends StatelessWidget {
+  @override
+  State<StatefulWidget> createState() => _HomePagePatientsState();
+
+}
+class _HomePagePatientsState extends State<HomePagePatients>{
+
+  int picker;
+
+  @override
+  void initState(){
+   super.initState();
+   picker = 0;
+  }
+
+  GlobalKey<ScaffoldState> homeKey = GlobalKey<ScaffoldState>();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
+      drawer: Drawer(
+        child: Column(
+            children: <Widget>[
+              DrawerHeader(
+               padding: EdgeInsets.zero,
+                child: Container(
+                  color: Theme.of(context).primaryColor,
+                )
+              ),
+              ListTile(
+                title: Text('Pacientes'),
+                onTap: (){
+                  Navigator.pop(context);
+                  setState(() {
+                    picker = 0;
+                  });
+                },),
+              ListTile(
+                title: Text('Perfil'),
+                onTap: (){
+                  Navigator.pop(context);
+                  setState(() {
+                    picker = 1;
+                  });
+                },),
+            ]
+        ),
+      ),
+      floatingActionButton: Builder(
+        builder: (BuildContext context){
+          return FloatingActionButton(
+            onPressed: () {
+              Scaffold.of(context).showSnackBar(SnackBar(
+                content:Text('Soy un snack'),
+              ));
+              print("Boton floante");
 
+            },
+            child: const Icon(Icons.add),
+          );
         },
-        child: const Icon(Icons.add),
       ),
       appBar: AppBar(
         title: const Text('Medical App Flutter'),
       ),
-      body: Column(
-
-        children: <Widget> [
-          CustomButton(),
-          Expanded(
-              child: ListView(
-                children: <Widget>[
-                  for (int i = 0; i < patients.length; i++)
-                    CustomListTile(patient: patients[i],)
-                ],
-              )
-          )
-        ],
-      ),
+      body: pages[picker]
     );
   }
+
 }
 

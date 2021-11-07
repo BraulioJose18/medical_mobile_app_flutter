@@ -14,10 +14,7 @@ class _CustomButtonState extends State<CustomButton> {
     return InkWell(
       onTap: (){
         print('boton presionado');
-        Navigator.of(context).push(MaterialPageRoute(
-            builder: (context){
-              return FormPatientPage();
-            }));
+        Navigator.pushNamed(context, 'detail_patient');
       },
       child: Container(
         height: 60.0,

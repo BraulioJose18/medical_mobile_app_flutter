@@ -4,7 +4,7 @@ import 'package:medical_mobile_app_flutter/models/patient.dart';
 
 class SelectedPatientPage extends StatelessWidget {
 
-  Patient? selectedPatient;
+  Patient selectedPatient;
 
   @override
   Widget build(BuildContext context) {

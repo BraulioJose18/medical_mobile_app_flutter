@@ -3,8 +3,8 @@ import 'package:medical_mobile_app_flutter/models/patient.dart';
 import 'package:medical_mobile_app_flutter/widgets/iconfont.dart';
 
 class PatientCard extends StatelessWidget {
-  Patient? patient;
-  Function? onCardClick;
+  Patient patient;
+  Function onCardClick;
 
   PatientCard({this.patient, this.onCardClick});
 
@@ -12,7 +12,7 @@ class PatientCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        this.onCardClick!();
+        this.onCardClick();
       },
       child: Container(
           margin: EdgeInsets.all(20),
@@ -51,7 +51,7 @@ class PatientCard extends StatelessWidget {
                     children: [
                       //IconFont(color: patient!.color, iconName: patient!.icon),
                       const SizedBox(width: 10),
-                      Text(patient!.fullName,
+                      Text(patient.fullName,
                           style: const TextStyle(
                               color: Colors.white, fontSize: 25))
                     ],

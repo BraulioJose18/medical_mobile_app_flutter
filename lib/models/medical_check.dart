@@ -10,12 +10,12 @@ class MedicalCheck {
   final int idPatient;
 
   MedicalCheck(
-      {required this.id,
-        required this.weight,
-        required this.temperature,
-        required this.pressure,
-        required this.saturation,
-        required this.idPatient});
+      {this.id,
+        this.weight,
+        this.temperature,
+        this.pressure,
+        this.saturation,
+        this.idPatient});
 
   factory MedicalCheck.fromJson(Map<String, dynamic> json) {
     // birth date have to be in date.toIso8601String();

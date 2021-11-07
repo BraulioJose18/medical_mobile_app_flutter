@@ -7,7 +7,7 @@ class MedicalHistory {
   final MedicalCheck medicalCheck;
 
   MedicalHistory(
-      {required this.id, required this.patient, required this.medicalCheck});
+      {this.id, this.patient, this.medicalCheck});
 
   factory MedicalHistory.fromJson(Map<String, dynamic> json) {
     // birth date have to be in date.toIso8601String();
