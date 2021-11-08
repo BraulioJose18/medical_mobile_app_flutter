@@ -10,7 +10,8 @@ class CustomListTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       onTap: (){
-        Navigator.pushNamed(context, 'detail_patient',arguments: Arguments(patient: patient));
+        Navigator.pushNamed(context, 'detail_patient');
+        //Navigator.pushNamed(context, 'form_add_patient',arguments: Arguments(patient: patient));
       },
       trailing: Icon(Icons.edit),
       leading: CircleAvatar(
@@ -20,6 +21,7 @@ class CustomListTile extends StatelessWidget {
       subtitle: Row(
         children: <Widget>[
           Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget> [
               Text('Dirección: '+ patient.address),
               Text('Coordenadas: ' + patient.locationLongitude.toString() +","+  patient.locationLatitude.toString()),

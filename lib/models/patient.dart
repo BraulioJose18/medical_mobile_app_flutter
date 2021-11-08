@@ -45,9 +45,29 @@ class Patient {
 }
 Patient patient1 = Patient(
     id: 1,
-    fullName: 'Pedrito',
+    fullName: 'Pedrito Ruiz',
+    birthDate: DateTime.now(),
+    height: 160,
+    address: 'Calle Siempre Viva 515',
+    locationLatitude: -500,
+    locationLongitude: 5000);
+
+Patient patient2 = Patient(
+    id: 2,
+    fullName: 'Luisa Manrique',
     birthDate: DateTime.now(),
     height: 170,
-    address: 'Calle Siempre Viva 515',
-    locationLatitude: -7800,
-    locationLongitude: 5000);
+    address: 'La Joya 120',
+    locationLatitude: -800,
+    locationLongitude: 1000);
+
+Patient patient3 = Patient(
+    id: 3,
+    fullName: 'Nadia Contreras',
+    birthDate: DateTime.now(),
+    height: 120,
+    address: 'Calle July 582',
+    locationLatitude: -700,
+    locationLongitude: 5010);
+
+

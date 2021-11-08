@@ -1,7 +1,10 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:medical_mobile_app_flutter/pages/list_medical.dart';
 import 'package:medical_mobile_app_flutter/pages/list_patients.dart';
+
+import 'list_patients_2.dart';
 
 List<Widget> pages = [
   ListPatientsPage(),
@@ -55,20 +58,6 @@ class _HomePagePatientsState extends State<HomePagePatients>{
                 },),
             ]
         ),
-      ),
-      floatingActionButton: Builder(
-        builder: (BuildContext context){
-          return FloatingActionButton(
-            onPressed: () {
-              Scaffold.of(context).showSnackBar(SnackBar(
-                content:Text('Soy un snack'),
-              ));
-              print("Boton floante");
-
-            },
-            child: const Icon(Icons.add),
-          );
-        },
       ),
       appBar: AppBar(
         title: const Text('Medical App Flutter'),

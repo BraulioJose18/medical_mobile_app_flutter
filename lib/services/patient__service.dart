@@ -5,7 +5,7 @@ import 'package:medical_mobile_app_flutter/models/patient.dart';
 const String BASE_URL = "http://10.0.2.2:8000";
 
 Future<List<Patient>> fetchAllPatients() async {
-  final response = await http.get(Uri.parse('$BASE_URL/patient/'));
+  var response = await http.get(Uri.parse('$BASE_URL/patient/'));
   if (response.statusCode == 200) {
     Iterable responseBody = json.decode(response.body);
     return List<Patient>.from(responseBody.map((model) => Patient.fromJson(model)));

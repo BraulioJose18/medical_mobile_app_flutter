@@ -5,7 +5,7 @@ class ListPatientController {
   static final ListPatientController instancia = ListPatientController._();
 
   static List<Patient> patient = [
-    patient1, patient1, patient1
+    patient1, patient2, patient3
   ];
 
   ListPatientController._();

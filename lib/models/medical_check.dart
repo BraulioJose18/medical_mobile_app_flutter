@@ -2,12 +2,12 @@ import 'dart:convert';
 
 
 class MedicalCheck {
-  final int id;
-  final double weight;
-  final double temperature;
-  final double pressure;
-  final double saturation;
-  final int idPatient;
+  int id;
+  double weight;
+  double temperature;
+  double pressure;
+  double saturation;
+  int idPatient;
 
   MedicalCheck(
       {this.id,
@@ -39,3 +39,16 @@ class MedicalCheck {
     });
   }
 }
+MedicalCheck medical1 = MedicalCheck(
+  id: 1,
+  weight: 40,
+  temperature: 35,
+  pressure: 20,
+  saturation: 30,
+);MedicalCheck medical2 = MedicalCheck(
+  id: 2,
+  weight: 67,
+  temperature: 37,
+  pressure: 25,
+  saturation: 32,
+);
